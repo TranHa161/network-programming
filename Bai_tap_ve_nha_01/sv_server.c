@@ -59,6 +59,8 @@ int main(int argc, char *argv[]) {
                 fprintf(f_log, "%s %s %s %s %s %.2f\n", 
                         client_ip, time_str, sv.mssv, sv.name, sv.birthday, sv.gpa);
                 fclose(f_log);
+                printf("%s %s %s %s %s %.2f\n", 
+                        client_ip, time_str, sv.mssv, sv.name, sv.birthday, sv.gpa);
             }
         }
 
