@@ -1,0 +1,15 @@
+# Chặn tất cả các file trong thư mục hiện tại
+*
+
+# Loại bỏ các thư mục con (nếu muốn)
+!*/
+
+# Cho phép các file mã nguồn và tài liệu
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*.sh
+!*.md
+!.gitignore
+!Makefile
