@@ -62,7 +62,7 @@ int main() {
             send(client, buf, strlen(buf), 0);
         }
 
-        if (fds[1].revents && POLLIN) {
+        if (fds[1].revents & POLLIN) {
             ret = recv(client, buf, sizeof(buf), 0);
             if (ret <= 0) {
                 break;

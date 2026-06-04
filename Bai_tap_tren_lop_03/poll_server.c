@@ -66,7 +66,7 @@ int main() {
         }
 
         // Kiem tra socket listener
-        if (fds[0].revents && POLLIN) {
+        if (fds[0].revents & POLLIN) {
             int client = accept(listener, NULL, NULL);
 
             if (nfds < MAX_CLIENTS) {
@@ -86,6 +86,10 @@ int main() {
                 int len = recv(fds[i].fd, buf, sizeof(buf), 0);
                 if (len <= 0) {
                     // TODO: xoa khoi mang fds
+                    close(fds[i].fd);
+                    fds[i] = fds[nfds - 1];
+                    nfds--;
+                    i--;
                     continue;
                 }
 
