@@ -20,7 +20,6 @@ int main()
     unsigned char *buffer = (unsigned char *)malloc(65535);
     int data_size;
     struct sockaddr saddr;
-    sxsxs
     socklen_t saddr_size = sizeof(saddr); 
 
     unsigned char ip_protocol;
